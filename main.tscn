@@ -96,6 +96,12 @@ stretch_mode = 5
 [node name="ProgressBar" parent="Control/VBoxContainer/2/Partner" index="0"]
 visible = false
 
+[node name="Key_Left" parent="Control/VBoxContainer/2/Partner" index="1"]
+visible = false
+
+[node name="Key_Right" parent="Control/VBoxContainer/2/Partner" index="2"]
+visible = false
+
 [node name="Fitness" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
