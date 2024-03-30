@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://csan6v74uwajo"]
+[gd_scene load_steps=4 format=3 uid="uid://csan6v74uwajo"]
 
 [ext_resource type="Script" path="res://Task.gd" id="1_j1xvc"]
 [ext_resource type="PackedScene" uid="uid://7v3hl0d5cp82" path="res://Scenes/progress_bar.tscn" id="2_b7ryf"]
+[ext_resource type="PackedScene" uid="uid://8ugemoobujcu" path="res://Scenes/key.tscn" id="3_ltx2x"]
 
 [node name="Task" type="TextureRect"]
 offset_right = 640.0
@@ -15,10 +16,24 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -150.0
-offset_top = -27.0
-offset_right = 150.0
+offset_left = -152.0
+offset_top = -28.0
+offset_right = 152.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
 value = 100.0
+
+[node name="Key_Left" parent="." instance=ExtResource("3_ltx2x")]
+layout_mode = 1
+offset_left = 168.0
+offset_top = 256.0
+offset_right = -408.0
+offset_bottom = -40.0
+
+[node name="Key_Right" parent="." instance=ExtResource("3_ltx2x")]
+layout_mode = 1
+offset_left = 408.0
+offset_top = 256.0
+offset_right = -168.0
+offset_bottom = -40.0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c5vf60hxy67pf"]
+[gd_scene load_steps=15 format=3 uid="uid://c5vf60hxy67pf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_nyyuw"]
 [ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://csan6v74uwajo" path="res://Scenes/task.tscn" id="3_w7fro"]
 [ext_resource type="Texture2D" uid="uid://cpjqtwa64s04o" path="res://Assets/Treadmill.png" id="5_bho01"]
 [ext_resource type="Texture2D" uid="uid://cwaifk5tir3q3" path="res://Assets/Bar.png" id="5_tnlyy"]
+[ext_resource type="Texture2D" uid="uid://curec2qlj6bi0" path="res://Assets/keys/Q-Key.png" id="5_tx8sn"]
+[ext_resource type="Texture2D" uid="uid://blspv2aqydo2q" path="res://Assets/keys/E-Key.png" id="6_f3ix5"]
 [ext_resource type="Texture2D" uid="uid://cs6hj40ep66up" path="res://Assets/Lady.png" id="7_nrh20"]
 [ext_resource type="Texture2D" uid="uid://c5uvfaip0ytgq" path="res://Assets/bedwing.png" id="8_gcvvb"]
 [ext_resource type="Texture2D" uid="uid://cgkk0nrgq62ja" path="res://Assets/Herd.png" id="9_tdwor"]
@@ -54,6 +56,12 @@ texture = ExtResource("3_o5mq4")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Key_Left" parent="Control/VBoxContainer/1/Laundry" index="1"]
+texture = ExtResource("5_tx8sn")
+
+[node name="Key_Right" parent="Control/VBoxContainer/1/Laundry" index="2"]
+texture = ExtResource("6_f3ix5")
+
 [node name="Cooking" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
@@ -85,6 +93,9 @@ texture = ExtResource("7_nrh20")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="ProgressBar" parent="Control/VBoxContainer/2/Partner" index="0"]
+visible = false
+
 [node name="Fitness" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
@@ -115,3 +126,6 @@ layout_mode = 2
 texture = ExtResource("8_gcvvb")
 expand_mode = 1
 stretch_mode = 5
+
+[editable path="Control/VBoxContainer/1/Laundry"]
+[editable path="Control/VBoxContainer/2/Partner"]
