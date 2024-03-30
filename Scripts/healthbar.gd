@@ -3,7 +3,7 @@ extends ProgressBar
 
 @onready var timer = $Timer
 
-var health = 0 : set: _set_health
+var health = 0 : set = _set_health
 
 func _set_health(new_health):
 	var prev_health = health
@@ -11,11 +11,12 @@ func _set_health(new_health):
 	value = health
 
 	if health <= 0:
-		que
+		queue_free()
 
 func init_health(_health):
 	health = _health
 	max_value = health
 	value = health
 
-
+func _on_timer_timeout():
+	health -= 0.05

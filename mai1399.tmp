@@ -1,0 +1,87 @@
+[gd_scene load_steps=14 format=3 uid="uid://c5vf60hxy67pf"]
+
+[ext_resource type="Texture2D" uid="uid://bkh3vh62rgilj" path="res://Assets/White.png" id="1_2ced4"]
+[ext_resource type="Script" path="res://main.gd" id="1_nyyuw"]
+[ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
+[ext_resource type="Texture2D" uid="uid://djchgne3uxa2v" path="res://Assets/Washing Machine.png" id="3_o5mq4"]
+[ext_resource type="Texture2D" uid="uid://uftsgu6a1884" path="res://Assets/Shopping Kart.jpg" id="3_pyd0l"]
+[ext_resource type="PackedScene" uid="uid://7v3hl0d5cp82" path="res://Scenes/progress_bar.tscn" id="5_5hw8o"]
+[ext_resource type="Texture2D" uid="uid://cpjqtwa64s04o" path="res://Assets/Treadmill.png" id="5_bho01"]
+[ext_resource type="Texture2D" uid="uid://cwaifk5tir3q3" path="res://Assets/Bar.png" id="5_tnlyy"]
+[ext_resource type="Texture2D" uid="uid://cs6hj40ep66up" path="res://Assets/Lady.png" id="7_nrh20"]
+[ext_resource type="Texture2D" uid="uid://c5uvfaip0ytgq" path="res://Assets/bedwing.png" id="8_gcvvb"]
+[ext_resource type="Texture2D" uid="uid://cgkk0nrgq62ja" path="res://Assets/Herd.png" id="9_tdwor"]
+[ext_resource type="Texture2D" uid="uid://bgtc65s1g0wgq" path="res://Assets/U-Bahn.png" id="10_76prr"]
+[ext_resource type="Texture2D" uid="uid://cicq63b5hmym0" path="res://Assets/Tisch.png" id="11_3vw7h"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_nyyuw")
+
+[node name="White" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_2ced4")
+
+[node name="Objects" type="CanvasLayer" parent="."]
+
+[node name="ShoppingKart" type="Sprite2D" parent="Objects"]
+position = Vector2(956, 210)
+scale = Vector2(0.418333, 0.419132)
+texture = ExtResource("3_pyd0l")
+
+[node name="ProgressBar" parent="Objects/ShoppingKart" instance=ExtResource("5_5hw8o")]
+offset_left = -308.0
+offset_top = 298.0
+offset_right = 290.0
+offset_bottom = 325.0
+
+[node name="WashingMachine" type="Sprite2D" parent="Objects"]
+position = Vector2(305, 213)
+scale = Vector2(0.382583, 0.382583)
+texture = ExtResource("3_o5mq4")
+
+[node name="ProgressBar" parent="Objects/WashingMachine" instance=ExtResource("5_5hw8o")]
+offset_left = -282.292
+offset_top = 326.727
+offset_right = 235.708
+offset_bottom = 353.727
+
+[node name="Bar" type="Sprite2D" parent="Objects"]
+position = Vector2(1607, 230)
+scale = Vector2(0.53875, 0.28375)
+texture = ExtResource("5_tnlyy")
+
+[node name="Treadmill" type="Sprite2D" parent="Objects"]
+position = Vector2(304, 560)
+scale = Vector2(0.650142, 0.650142)
+texture = ExtResource("5_bho01")
+
+[node name="BackgroundWhite" type="Sprite2D" parent="Objects"]
+position = Vector2(960, 540)
+texture = ExtResource("2_ewxbc")
+
+[node name="Lady" type="Sprite2D" parent="Objects"]
+position = Vector2(963, 567)
+scale = Vector2(0.766667, 0.766667)
+texture = ExtResource("7_nrh20")
+
+[node name="Bedwing" type="Sprite2D" parent="Objects"]
+position = Vector2(1621, 622)
+scale = Vector2(0.2068, 0.2068)
+texture = ExtResource("8_gcvvb")
+
+[node name="Herd" type="Sprite2D" parent="Objects"]
+position = Vector2(321, 915)
+scale = Vector2(0.180027, 0.180027)
+texture = ExtResource("9_tdwor")
+
+[node name="U-bahn" type="Sprite2D" parent="Objects"]
+position = Vector2(965, 915)
+scale = Vector2(1.13235, 1.13235)
+texture = ExtResource("10_76prr")
+
+[node name="Tisch" type="Sprite2D" parent="Objects"]
+position = Vector2(1613, 914)
+scale = Vector2(0.307083, 0.307083)
+texture = ExtResource("11_3vw7h")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]

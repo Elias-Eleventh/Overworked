@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://7v3hl0d5cp82"]
 
-[ext_resource type="Script" path="res://healthbar.gd" id="1_yoa6b"]
+[ext_resource type="Script" path="res://Scripts/healthbar.gd" id="1_yoa6b"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qqcsb"]
 bg_color = Color(0.278431, 0.0313726, 0, 1)
@@ -28,3 +28,8 @@ step = 0.1
 value = 43.0
 show_percentage = false
 script = ExtResource("1_yoa6b")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.05
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
