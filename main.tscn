@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://c5vf60hxy67pf"]
+
+[ext_resource type="Texture2D" uid="uid://bkh3vh62rgilj" path="res://Assets/White.png" id="1_2ced4"]
+[ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
+[ext_resource type="Texture2D" uid="uid://djchgne3uxa2v" path="res://Assets/Washing Machine.png" id="3_o5mq4"]
+[ext_resource type="Texture2D" uid="uid://uftsgu6a1884" path="res://Assets/Shopping Kart.jpg" id="3_pyd0l"]
+[ext_resource type="Texture2D" uid="uid://cpjqtwa64s04o" path="res://Assets/Treadmill.png" id="5_bho01"]
+[ext_resource type="Texture2D" uid="uid://cwaifk5tir3q3" path="res://Assets/Bar.png" id="5_tnlyy"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="White" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_2ced4")
+
+[node name="Objects" type="CanvasLayer" parent="."]
+
+[node name="ShoppingKart" type="Sprite2D" parent="Objects"]
+position = Vector2(956, 210)
+scale = Vector2(0.418333, 0.419132)
+texture = ExtResource("3_pyd0l")
+
+[node name="WashingMachine" type="Sprite2D" parent="Objects"]
+position = Vector2(305, 213)
+scale = Vector2(0.382583, 0.382583)
+texture = ExtResource("3_o5mq4")
+
+[node name="Bar" type="Sprite2D" parent="Objects"]
+position = Vector2(1607, 230)
+scale = Vector2(0.53875, 0.28375)
+texture = ExtResource("5_tnlyy")
+
+[node name="Treadmill" type="Sprite2D" parent="Objects"]
+position = Vector2(304, 560)
+scale = Vector2(0.650142, 0.650142)
+texture = ExtResource("5_bho01")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BackgroundWhite" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_ewxbc")
