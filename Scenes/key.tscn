@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://8ugemoobujcu"]
 
-[ext_resource type="Texture2D" uid="uid://bvf14g1ki08ea" path="res://Assets/keys/Blank-Key_1.png" id="1_k8j2u"]
+[ext_resource type="Texture2D" uid="uid://dk4vhr5p4fm57" path="res://Assets/keys/Blank-Key_1.png" id="1_k8j2u"]
 [ext_resource type="Script" path="res://Scenes/key.gd" id="2_g2s5v"]
 
 [sub_resource type="Animation" id="Animation_mkbwk"]
