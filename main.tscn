@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5vf60hxy67pf"]
+[gd_scene load_steps=29 format=3 uid="uid://c5vf60hxy67pf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_nyyuw"]
 [ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
@@ -10,10 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://curec2qlj6bi0" path="res://Assets/keys/Q-Key.png" id="5_tx8sn"]
 [ext_resource type="Texture2D" uid="uid://blspv2aqydo2q" path="res://Assets/keys/E-Key.png" id="6_f3ix5"]
 [ext_resource type="Texture2D" uid="uid://cs6hj40ep66up" path="res://Assets/Lady.png" id="7_nrh20"]
+[ext_resource type="Texture2D" uid="uid://bsux7d25ptf3j" path="res://Assets/keys/U-Key.png" id="8_4i4bg"]
 [ext_resource type="Texture2D" uid="uid://c5uvfaip0ytgq" path="res://Assets/bedwing.png" id="8_gcvvb"]
+[ext_resource type="Texture2D" uid="uid://clec4x30l5xkq" path="res://Assets/keys/P-Key.png" id="9_87i2i"]
 [ext_resource type="Texture2D" uid="uid://cgkk0nrgq62ja" path="res://Assets/Herd.png" id="9_tdwor"]
 [ext_resource type="Texture2D" uid="uid://bgtc65s1g0wgq" path="res://Assets/U-Bahn.png" id="10_76prr"]
 [ext_resource type="Texture2D" uid="uid://cicq63b5hmym0" path="res://Assets/Tisch.png" id="11_3vw7h"]
+[ext_resource type="Texture2D" uid="uid://dj7m6dmrfje6a" path="res://Assets/keys/7-Key.png" id="11_xud6n"]
+[ext_resource type="Texture2D" uid="uid://ce5ag12s5kep0" path="res://Assets/keys/9-Key.png" id="12_lic7e"]
+[ext_resource type="Texture2D" uid="uid://yhsyk2jre7bg" path="res://Assets/keys/A-Key.png" id="14_6nggt"]
+[ext_resource type="Texture2D" uid="uid://coyi5kdxen8pe" path="res://Assets/keys/D-Key.png" id="15_akw0x"]
+[ext_resource type="Texture2D" uid="uid://cy42p1ppwt184" path="res://Assets/keys/Enter-Key.png" id="18_7ug5o"]
+[ext_resource type="Texture2D" uid="uid://bebcsuoge6xf" path="res://Assets/keys/Backspace.png" id="19_pqtx6"]
+[ext_resource type="Texture2D" uid="uid://d0mrgyj7kseai" path="res://Assets/keys/Space-Key.png" id="20_bixq0"]
+[ext_resource type="Texture2D" uid="uid://c6enqjw4lfaek" path="res://Assets/keys/CTRL-Key.png" id="21_rfn0k"]
+[ext_resource type="Texture2D" uid="uid://brv27r1gy632d" path="res://Assets/keys/H-Key.png" id="22_e0e8h"]
+[ext_resource type="Texture2D" uid="uid://cnt2crxphltb5" path="res://Assets/keys/K-Key.png" id="23_pxfe1"]
+[ext_resource type="Texture2D" uid="uid://didu2d8ycdqs2" path="res://Assets/keys/1-Key.png" id="25_3kdg2"]
+[ext_resource type="Texture2D" uid="uid://c54g6yji2c4s" path="res://Assets/keys/3-Key.png" id="26_xyygi"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nyyuw")
@@ -69,12 +83,24 @@ texture = ExtResource("9_tdwor")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Key_Left" parent="Control/VBoxContainer/1/Cooking" index="1"]
+texture = ExtResource("8_4i4bg")
+
+[node name="Key_Right" parent="Control/VBoxContainer/1/Cooking" index="2"]
+texture = ExtResource("9_87i2i")
+
 [node name="Socialising" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
 texture = ExtResource("5_tnlyy")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Key_Left" parent="Control/VBoxContainer/1/Socialising" index="1"]
+texture = ExtResource("11_xud6n")
+
+[node name="Key_Right" parent="Control/VBoxContainer/1/Socialising" index="2"]
+texture = ExtResource("12_lic7e")
 
 [node name="2" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
@@ -85,6 +111,12 @@ layout_mode = 2
 texture = ExtResource("3_pyd0l")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Key_Left" parent="Control/VBoxContainer/2/Shopping" index="1"]
+texture = ExtResource("14_6nggt")
+
+[node name="Key_Right" parent="Control/VBoxContainer/2/Shopping" index="2"]
+texture = ExtResource("15_akw0x")
 
 [node name="Partner" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
@@ -109,6 +141,12 @@ texture = ExtResource("5_bho01")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Key_Left" parent="Control/VBoxContainer/2/Fitness" index="1"]
+texture = ExtResource("18_7ug5o")
+
+[node name="Key_Right" parent="Control/VBoxContainer/2/Fitness" index="2"]
+texture = ExtResource("19_pqtx6")
+
 [node name="3" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
@@ -119,12 +157,24 @@ texture = ExtResource("10_76prr")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Key_Left" parent="Control/VBoxContainer/3/Travell" index="1"]
+texture = ExtResource("21_rfn0k")
+
+[node name="Key_Right" parent="Control/VBoxContainer/3/Travell" index="2"]
+texture = ExtResource("20_bixq0")
+
 [node name="Work" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
 texture = ExtResource("11_3vw7h")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Key_Left" parent="Control/VBoxContainer/3/Work" index="1"]
+texture = ExtResource("22_e0e8h")
+
+[node name="Key_Right" parent="Control/VBoxContainer/3/Work" index="2"]
+texture = ExtResource("23_pxfe1")
 
 [node name="Childcare" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
@@ -133,10 +183,23 @@ texture = ExtResource("8_gcvvb")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="Key_Left" parent="Control/VBoxContainer/3/Childcare" index="1"]
+texture = ExtResource("25_3kdg2")
+
+[node name="Key_Right" parent="Control/VBoxContainer/3/Childcare" index="2"]
+texture = ExtResource("26_xyygi")
+
 [node name="IncreaseDifficulty" type="Timer" parent="."]
 wait_time = 5.0
 
 [connection signal="timeout" from="IncreaseDifficulty" to="." method="_on_increase_difficulty_timeout"]
 
 [editable path="Control/VBoxContainer/1/Laundry"]
+[editable path="Control/VBoxContainer/1/Cooking"]
+[editable path="Control/VBoxContainer/1/Socialising"]
+[editable path="Control/VBoxContainer/2/Shopping"]
 [editable path="Control/VBoxContainer/2/Partner"]
+[editable path="Control/VBoxContainer/2/Fitness"]
+[editable path="Control/VBoxContainer/3/Travell"]
+[editable path="Control/VBoxContainer/3/Work"]
+[editable path="Control/VBoxContainer/3/Childcare"]
