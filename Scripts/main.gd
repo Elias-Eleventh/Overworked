@@ -129,5 +129,4 @@ func _on_increase_difficulty_timeout():
 	if currentDifficulty < tasksPB.size():
 		increaseDifficulty()
 
-#func addHealth(Task):
-#	Task.health += 0.2
+

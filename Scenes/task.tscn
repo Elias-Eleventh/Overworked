@@ -37,3 +37,5 @@ offset_left = 408.0
 offset_top = 256.0
 offset_right = -168.0
 offset_bottom = -40.0
+
+[connection signal="dead" from="ProgressBar" to="." method="_on_progress_bar_dead"]

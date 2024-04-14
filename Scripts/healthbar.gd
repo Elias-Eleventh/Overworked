@@ -1,7 +1,7 @@
 extends ProgressBar
 
 var health = 0 : set = _set_health
-
+signal dead
 #func _process(delta):
 	
 
@@ -11,6 +11,7 @@ func _set_health(new_health):
 	value = health
 
 	if health <= 0:
+		emit_signal("dead")
 		queue_free()
 
 func init_health(_health):

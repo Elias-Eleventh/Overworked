@@ -5,6 +5,9 @@ extends TextureRect
 @onready var progress_bar = $ProgressBar
 @onready var label = progress_bar.get_child(0)
 
+
+signal gameOver
+
 var newText = ""
 var hps = 1
 var health = (randi()% 11 + 10)
@@ -26,5 +29,9 @@ func activateTask():
 func _process(delta):
 	if isActive:
 		progress_bar._set_health(progress_bar.health-(delta * hps))
-		newText = String(progress_bar.health)
+		newText = String.num(progress_bar.health,2)
 		label.text = newText
+
+func _on_progress_bar_dead():
+	isActive = false
+	get_tree().change_scene_to_file("res://Scenes/game_over!.tscn")
