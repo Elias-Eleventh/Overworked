@@ -52,10 +52,7 @@ var currentDifficulty = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in tasksPB.size():
-		tasksPB[i].init_health(randi()% 11 + 10)
 	
-	tasksPB[0].timer.start()
 	tasks[0].isActive = true
 	tasks[0].activateTask()
 	increase_difficulty.start()
@@ -121,7 +118,6 @@ func _process(delta):
 
 func increaseDifficulty():
 	if currentDifficulty < tasksPB.size():
-		tasksPB[currentDifficulty].timer.start()
 		tasks[currentDifficulty].activateTask()
 		currentDifficulty += 1
 
@@ -132,3 +128,6 @@ func _input(event):
 func _on_increase_difficulty_timeout():
 	if currentDifficulty < tasksPB.size():
 		increaseDifficulty()
+
+#func addHealth(Task):
+#	Task.health += 0.2
