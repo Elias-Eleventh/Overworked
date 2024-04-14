@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b5m8tm71egkru"]
 
-[ext_resource type="VideoStream" path="res://Assets/Videos/Game_Over_Splash.ogv" id="1_bx6dl"]
 [ext_resource type="Script" path="res://Scenes/game_over!.gd" id="1_ecixy"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/Game_Over_Splash2.ogv" id="2_3e7od"]
 
 [node name="GAME OVER!" type="Control"]
 layout_mode = 3
@@ -25,7 +25,7 @@ color = Color(0, 0, 0, 1)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-stream = ExtResource("1_bx6dl")
+stream = ExtResource("2_3e7od")
 volume_db = -15.0
 autoplay = true
 
