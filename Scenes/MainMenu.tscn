@@ -1,0 +1,69 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8b4r4lh1mnai"]
+
+[ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gi622")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_gkx2v")
+autoplay = true
+loop = true
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+
+[node name="start" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Begin Adulthood"
+
+[node name="quit" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Remain in Childhood"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+layout_mode = 0
+offset_left = 1116.0
+offset_top = 600.0
+offset_right = 1258.0
+offset_bottom = 631.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 15
+text = "DebugMode"
+
+[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]

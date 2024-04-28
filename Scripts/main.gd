@@ -5,6 +5,7 @@ extends Node2D
 @onready var cookinghp = $"Control/VBoxContainer/1/Cooking/ProgressBar"
 @onready var socialisinghp = $"Control/VBoxContainer/1/Socialising/ProgressBar"
 @onready var shoppinghp = $"Control/VBoxContainer/2/Shopping/ProgressBar"
+@onready var partnerhp = $"Control/VBoxContainer/2/Partner/ProgressBar"
 @onready var fitnesshp = $"Control/VBoxContainer/2/Fitness/ProgressBar"
 @onready var travellhp = $"Control/VBoxContainer/3/Travell/ProgressBar"
 @onready var workhp = $"Control/VBoxContainer/3/Work/ProgressBar"
@@ -41,21 +42,26 @@ extends Node2D
 @onready var key_3 = $"Control/VBoxContainer/3/Childcare/Key_Right"
 
 
+@onready var dummy = $"Control/VBoxContainer/2/dummy"
+
+var difficulty = 1
 
 
-
-
-@onready var tasksPB = [laundryhp,cookinghp,socialisinghp,shoppinghp,fitnesshp,travellhp,workhp,childcarehp]
-@onready var tasks = [laundry,cooking,socialising,shopping,fitness,travell,work,childcare]
+@onready var tasksPB = [laundryhp,cookinghp,socialisinghp,shoppinghp,fitnesshp,travellhp,workhp,childcarehp,partnerhp]
+@onready var tasks = [laundry,cooking,socialising,shopping,fitness,travell,work,childcare,partner]
 var currentDifficulty = 1
 @onready var increase_difficulty = $IncreaseDifficulty
+@onready var start_game = $StartGame
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
-	tasks[0].isActive = true
-	tasks[0].activateTask()
-	increase_difficulty.start()
+	if(Globals.debugMode):
+		increase_difficulty.wait_time = 1
+	else:
+		increase_difficulty.wait_time = 5*difficulty
+
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -115,6 +121,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("3"):
 		childcarehp.health += 0.2
 		key_3.get_child(0).play("Keypress")
+		
+	if (partner.isActive):
+		dummy.visible = false
+		partner.progress_bar.visible = false
+		partner.key_left.visible = false
+		partner.key_right.visible = false
 
 func increaseDifficulty():
 	if currentDifficulty < tasksPB.size():
@@ -129,4 +141,7 @@ func _on_increase_difficulty_timeout():
 	if currentDifficulty < tasksPB.size():
 		increaseDifficulty()
 
-
+func _on_start_game_timeout():
+	tasks[0].isActive = true
+	tasks[0].activateTask()
+	increase_difficulty.start()

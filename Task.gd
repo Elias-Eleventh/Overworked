@@ -14,13 +14,20 @@ var health = (randi()% 11 + 10)
 var isActive 
 func _ready():
 	isActive = false
+	self.visible = false
 	progress_bar.visible = false
-	progress_bar.init_health(health)
+	if (self.name == "Partner"):
+		health = 10000
+		progress_bar.init_health(health)
+	else:
+		progress_bar.init_health(health)
 	key_left.visible = false
 	key_right.visible = false
 	
 func activateTask():
 	isActive = true
+	print("Task started: " + self.name + " with " + String.num(health) + " seconds to live")
+	self.visible = true
 	progress_bar.visible = true
 	key_left.visible = true
 	key_right.visible = true
@@ -34,4 +41,6 @@ func _process(delta):
 
 func _on_progress_bar_dead():
 	isActive = false
-	get_tree().change_scene_to_file("res://Scenes/game_over!.tscn")
+	print("Failed task: " + self.name)
+	if(!Globals.debugMode):
+		get_tree().change_scene_to_file("res://Scenes/game_over!.tscn")

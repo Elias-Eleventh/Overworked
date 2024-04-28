@@ -118,21 +118,16 @@ texture = ExtResource("14_6nggt")
 [node name="Key_Right" parent="Control/VBoxContainer/2/Shopping" index="2"]
 texture = ExtResource("15_akw0x")
 
+[node name="dummy" type="TextureRect" parent="Control/VBoxContainer/2"]
+custom_minimum_size = Vector2(635, 0)
+layout_mode = 2
+
 [node name="Partner" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
 texture = ExtResource("7_nrh20")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="ProgressBar" parent="Control/VBoxContainer/2/Partner" index="0"]
-visible = false
-
-[node name="Key_Left" parent="Control/VBoxContainer/2/Partner" index="1"]
-visible = false
-
-[node name="Key_Right" parent="Control/VBoxContainer/2/Partner" index="2"]
-visible = false
 
 [node name="Fitness" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(635, 355)
@@ -192,7 +187,13 @@ texture = ExtResource("26_xyygi")
 [node name="IncreaseDifficulty" type="Timer" parent="."]
 wait_time = 5.0
 
+[node name="StartGame" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
 [connection signal="timeout" from="IncreaseDifficulty" to="." method="_on_increase_difficulty_timeout"]
+[connection signal="timeout" from="StartGame" to="." method="_on_start_game_timeout"]
 
 [editable path="Control/VBoxContainer/1/Laundry"]
 [editable path="Control/VBoxContainer/1/Cooking"]
