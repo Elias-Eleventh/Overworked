@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://c5vf60hxy67pf"]
+[gd_scene load_steps=30 format=3 uid="uid://c5vf60hxy67pf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_nyyuw"]
 [ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
@@ -28,6 +28,7 @@
 [ext_resource type="Texture2D" uid="uid://cnt2crxphltb5" path="res://Assets/keys/K-Key.png" id="23_pxfe1"]
 [ext_resource type="Texture2D" uid="uid://didu2d8ycdqs2" path="res://Assets/keys/1-Key.png" id="25_3kdg2"]
 [ext_resource type="Texture2D" uid="uid://c54g6yji2c4s" path="res://Assets/keys/3-Key.png" id="26_xyygi"]
+[ext_resource type="AudioStream" uid="uid://cjab8l5lartqm" path="res://Assets/Sounds/tada1.mp3" id="29_f5luc"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nyyuw")
@@ -192,8 +193,62 @@ wait_time = 5.0
 one_shot = true
 autostart = true
 
+[node name="GameWinTimer" type="Timer" parent="."]
+wait_time = 90.0
+one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 860.0
+offset_top = 370.0
+offset_right = 1060.0
+offset_bottom = 440.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.756863, 0.756863, 0.756863, 0.607843)
+
+[node name="TimerLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -27.5
+offset_bottom = 27.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.294118, 0.294118, 0.294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 40
+text = "TEST"
+horizontal_alignment = 1
+
+[node name="game won label" type="Label" parent="."]
+offset_left = 649.0
+offset_top = 635.0
+offset_right = 1269.0
+offset_bottom = 718.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 60
+text = "CONGRATS YOU WIN!"
+
+[node name="tada" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("29_f5luc")
+
 [connection signal="timeout" from="IncreaseDifficulty" to="." method="_on_increase_difficulty_timeout"]
 [connection signal="timeout" from="StartGame" to="." method="_on_start_game_timeout"]
+[connection signal="timeout" from="GameWinTimer" to="." method="_on_game_win_timer_timeout"]
 
 [editable path="Control/VBoxContainer/1/Laundry"]
 [editable path="Control/VBoxContainer/1/Cooking"]

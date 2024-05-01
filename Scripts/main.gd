@@ -41,10 +41,12 @@ extends Node2D
 @onready var key_1 = $"Control/VBoxContainer/3/Childcare/Key_Left"
 @onready var key_3 = $"Control/VBoxContainer/3/Childcare/Key_Right"
 
+@onready var timer_label = $ColorRect/TimerLabel
+@onready var game_win_timer = $GameWinTimer
+@onready var game_won_label = $"game won label"
+@onready var tada = $tada
 
 @onready var dummy = $"Control/VBoxContainer/2/dummy"
-
-var difficulty = 1
 
 
 @onready var tasksPB = [laundryhp,cookinghp,socialisinghp,shoppinghp,fitnesshp,travellhp,workhp,childcarehp,partnerhp]
@@ -56,12 +58,13 @@ var currentDifficulty = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	game_won_label.visible = false
 	if(Globals.debugMode):
 		increase_difficulty.wait_time = 1
+		game_win_timer.wait_time = 15
 	else:
-		increase_difficulty.wait_time = 5*difficulty
-
-
+		increase_difficulty.wait_time = 5*Globals.difficulty
+		game_win_timer.wait_time = Globals.timeToWin
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -127,6 +130,8 @@ func _process(delta):
 		partner.progress_bar.visible = false
 		partner.key_left.visible = false
 		partner.key_right.visible = false
+		
+	_set_timer_text()
 
 func increaseDifficulty():
 	if currentDifficulty < tasksPB.size():
@@ -134,7 +139,7 @@ func increaseDifficulty():
 		currentDifficulty += 1
 
 func _input(event):
-	if Input.is_action_pressed("ui_cancel"):
+	if Input.is_action_pressed("QuitGame"):
 		get_tree().quit()
 
 func _on_increase_difficulty_timeout():
@@ -144,4 +149,13 @@ func _on_increase_difficulty_timeout():
 func _on_start_game_timeout():
 	tasks[0].isActive = true
 	tasks[0].activateTask()
+	game_win_timer.start()
 	increase_difficulty.start()
+
+func _set_timer_text():
+	timer_label.text = String.num(game_win_timer.time_left,0)
+
+func _on_game_win_timer_timeout():
+	tada.play()
+	game_won_label.visible = true
+	print("YOU HAVE WON THE GAME!")
