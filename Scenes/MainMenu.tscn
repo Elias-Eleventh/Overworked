@@ -46,12 +46,12 @@ layout_mode = 2
 [node name="start" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Begin Adulthood"
+text = "Begin Work"
 
 [node name="quit" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
-text = "Remain in Childhood"
+text = "Remain Relaxed"
 
 [node name="CheckButton" type="CheckButton" parent="."]
 layout_mode = 0
