@@ -43,8 +43,6 @@ extends Node2D
 
 @onready var timer_label = $ColorRect/TimerLabel
 @onready var game_win_timer = $GameWinTimer
-@onready var game_won_label = $"game won label"
-@onready var tada = $tada
 
 @onready var dummy = $"Control/VBoxContainer/2/dummy"
 
@@ -58,12 +56,11 @@ var currentDifficulty = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	game_won_label.visible = false
 	if(Globals.debugMode):
 		increase_difficulty.wait_time = 1
 		game_win_timer.wait_time = 15
 	else:
-		increase_difficulty.wait_time = 5*Globals.difficulty
+		increase_difficulty.wait_time = 5*(1/Globals.difficulty)
 		game_win_timer.wait_time = Globals.timeToWin
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -156,6 +153,5 @@ func _set_timer_text():
 	timer_label.text = String.num(game_win_timer.time_left,0)
 
 func _on_game_win_timer_timeout():
-	tada.play()
-	game_won_label.visible = true
+	get_tree().change_scene_to_file("res://Scenes/you_won.tscn")
 	print("YOU HAVE WON THE GAME!")
