@@ -10,7 +10,7 @@ signal gameOver
 
 var newText = ""
 var hps = 1
-var health = (randi()% 11 + 10)
+var health = (randi()% 11 + (10/Globals.difficulty))
 var isActive 
 func _ready():
 	isActive = false

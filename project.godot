@@ -32,7 +32,7 @@ window/stretch/aspect="ignore"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/copper_dc/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
