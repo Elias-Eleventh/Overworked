@@ -39,7 +39,7 @@ anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+[node name="WomanAnimation" type="VideoStreamPlayer" parent="Control"]
 z_index = 2
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
