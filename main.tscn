@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://c5vf60hxy67pf"]
+[gd_scene load_steps=30 format=3 uid="uid://c5vf60hxy67pf"]
 
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_nyyuw"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/Untitled.ogv" id="2_450bs"]
 [ext_resource type="Texture2D" uid="uid://brj88gnt500km" path="res://Assets/Background White.png" id="2_ewxbc"]
 [ext_resource type="Texture2D" uid="uid://djchgne3uxa2v" path="res://Assets/Washing Machine.png" id="3_o5mq4"]
 [ext_resource type="Texture2D" uid="uid://uftsgu6a1884" path="res://Assets/Shopping Kart.jpg" id="3_pyd0l"]
@@ -37,6 +38,19 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Control"]
+z_index = 2
+custom_minimum_size = Vector2(635, 355)
+layout_mode = 2
+offset_left = 642.0
+offset_top = 363.0
+offset_right = 1277.0
+offset_bottom = 718.0
+stream = ExtResource("2_450bs")
+autoplay = true
+expand = true
+loop = true
 
 [node name="Background" type="ColorRect" parent="Control"]
 layout_mode = 1
@@ -119,10 +133,11 @@ texture = ExtResource("14_6nggt")
 texture = ExtResource("15_akw0x")
 
 [node name="dummy" type="TextureRect" parent="Control/VBoxContainer/2"]
-custom_minimum_size = Vector2(635, 0)
+custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
 
 [node name="Partner" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
+visible = false
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
 texture = ExtResource("7_nrh20")
@@ -197,6 +212,7 @@ wait_time = 90.0
 one_shot = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
+z_index = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
