@@ -78,10 +78,10 @@ offset_bottom = 1073.0
 layout_mode = 2
 
 [node name="Laundry" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 texture = ExtResource("3_o5mq4")
-expand_mode = 1
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Key_Left" parent="Control/VBoxContainer/1/Laundry" index="1"]
@@ -91,10 +91,10 @@ texture = ExtResource("5_tx8sn")
 texture = ExtResource("6_f3ix5")
 
 [node name="Cooking" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(636, 355)
 layout_mode = 2
 texture = ExtResource("9_tdwor")
-expand_mode = 1
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Key_Left" parent="Control/VBoxContainer/1/Cooking" index="1"]
@@ -120,10 +120,10 @@ texture = ExtResource("12_lic7e")
 layout_mode = 2
 
 [node name="Shopping" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 texture = ExtResource("3_pyd0l")
-expand_mode = 1
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Key_Left" parent="Control/VBoxContainer/2/Shopping" index="1"]
@@ -133,7 +133,7 @@ texture = ExtResource("14_6nggt")
 texture = ExtResource("15_akw0x")
 
 [node name="dummy" type="TextureRect" parent="Control/VBoxContainer/2"]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 
 [node name="Partner" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
@@ -145,7 +145,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Fitness" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(640, 355)
 layout_mode = 2
 texture = ExtResource("5_bho01")
 expand_mode = 1
@@ -161,7 +161,7 @@ texture = ExtResource("19_pqtx6")
 layout_mode = 2
 
 [node name="Travell" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("10_76prr")
 expand_mode = 1
@@ -174,7 +174,7 @@ texture = ExtResource("21_rfn0k")
 texture = ExtResource("20_bixq0")
 
 [node name="Work" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("11_3vw7h")
 expand_mode = 1
@@ -187,10 +187,10 @@ texture = ExtResource("22_e0e8h")
 texture = ExtResource("23_pxfe1")
 
 [node name="Childcare" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("8_gcvvb")
-expand_mode = 1
+expand_mode = 5
 stretch_mode = 5
 
 [node name="Key_Left" parent="Control/VBoxContainer/3/Childcare" index="1"]
