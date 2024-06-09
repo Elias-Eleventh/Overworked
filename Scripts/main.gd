@@ -3,24 +3,24 @@ extends Node2D
 #Lebensbalken
 @onready var laundryhp = $"Control/VBoxContainer/1/Laundry/ProgressBar"
 @onready var cookinghp = $"Control/VBoxContainer/1/Cooking/ProgressBar"
-@onready var socialisinghp = $"Control/VBoxContainer/1/Socialising/ProgressBar"
-@onready var shoppinghp = $"Control/VBoxContainer/2/Shopping/ProgressBar"
+@onready var mophp = $"Control/VBoxContainer/1/Mop/ProgressBar"
+@onready var babyhp = $"Control/VBoxContainer/2/baby/ProgressBar"
 @onready var partnerhp = $"Control/VBoxContainer/2/Partner/ProgressBar"
 @onready var fitnesshp = $"Control/VBoxContainer/2/Fitness/ProgressBar"
-@onready var travellhp = $"Control/VBoxContainer/3/Travell/ProgressBar"
-@onready var workhp = $"Control/VBoxContainer/3/Work/ProgressBar"
-@onready var childcarehp = $"Control/VBoxContainer/3/Childcare/ProgressBar"
+@onready var shoppinghp = $"Control/VBoxContainer/3/Shopping/ProgressBar"
+@onready var metrohp = $"Control/VBoxContainer/3/Metro/ProgressBar"
+@onready var officehp = $"Control/VBoxContainer/3/Office/ProgressBar"
 
 #Tasks
 @onready var laundry = $"Control/VBoxContainer/1/Laundry"
 @onready var cooking = $"Control/VBoxContainer/1/Cooking"
-@onready var socialising = $"Control/VBoxContainer/1/Socialising"
-@onready var shopping = $"Control/VBoxContainer/2/Shopping"
+@onready var mop = $"Control/VBoxContainer/1/Mop"
+@onready var baby = $"Control/VBoxContainer/2/baby"
 @onready var partner = $"Control/VBoxContainer/2/Partner"
 @onready var fitness = $"Control/VBoxContainer/2/Fitness"
-@onready var travell = $"Control/VBoxContainer/3/Travell"
-@onready var work = $"Control/VBoxContainer/3/Work"
-@onready var childcare = $"Control/VBoxContainer/3/Childcare"
+@onready var shopping = $"Control/VBoxContainer/3/Shopping"
+@onready var metro = $"Control/VBoxContainer/3/Metro"
+@onready var office = $"Control/VBoxContainer/3/Office"
 
 
 #Keys
@@ -28,18 +28,18 @@ extends Node2D
 @onready var key_e = $"Control/VBoxContainer/1/Laundry/Key_Right"
 @onready var key_u = $"Control/VBoxContainer/1/Cooking/Key_Left"
 @onready var key_p = $"Control/VBoxContainer/1/Cooking/Key_Right"
-@onready var key_7 = $"Control/VBoxContainer/1/Socialising/Key_Left"
-@onready var key_9 = $"Control/VBoxContainer/1/Socialising/Key_Right"
-@onready var key_a = $"Control/VBoxContainer/2/Shopping/Key_Left"
-@onready var key_d = $"Control/VBoxContainer/2/Shopping/Key_Right"
+@onready var key_7 = $"Control/VBoxContainer/1/Mop/Key_Left"
+@onready var key_9 = $"Control/VBoxContainer/1/Mop/Key_Right"
+@onready var key_a = $"Control/VBoxContainer/2/baby/Key_Left"
+@onready var key_d = $"Control/VBoxContainer/2/baby/Key_Right"
 @onready var key_enter = $"Control/VBoxContainer/2/Fitness/Key_Left"
 @onready var key_backspace = $"Control/VBoxContainer/2/Fitness/Key_Right"
-@onready var key_ctrl = $"Control/VBoxContainer/3/Travell/Key_Left"
-@onready var key_space = $"Control/VBoxContainer/3/Travell/Key_Right"
-@onready var key_h = $"Control/VBoxContainer/3/Work/Key_Left"
-@onready var key_k = $"Control/VBoxContainer/3/Work/Key_Right"
-@onready var key_1 = $"Control/VBoxContainer/3/Childcare/Key_Left"
-@onready var key_3 = $"Control/VBoxContainer/3/Childcare/Key_Right"
+@onready var key_ctrl = $"Control/VBoxContainer/3/Shopping/Key_Left"
+@onready var key_space = $"Control/VBoxContainer/3/Shopping/Key_Right"
+@onready var key_h = $"Control/VBoxContainer/3/Metro/Key_Left"
+@onready var key_k = $"Control/VBoxContainer/3/Metro/Key_Right"
+@onready var key_1 = $"Control/VBoxContainer/3/Office/Key_Left"
+@onready var key_3 = $"Control/VBoxContainer/3/Office/Key_Right"
 
 @onready var timer_label = $ColorRect/TimerLabel
 @onready var game_win_timer = $GameWinTimer
@@ -47,8 +47,8 @@ extends Node2D
 @onready var dummy = $"Control/VBoxContainer/2/dummy"
 
 
-@onready var tasksPB = [laundryhp,cookinghp,socialisinghp,shoppinghp,fitnesshp,travellhp,workhp,childcarehp,partnerhp]
-@onready var tasks = [laundry,cooking,socialising,shopping,fitness,travell,work,childcare,partner]
+@onready var tasksPB = [laundryhp,cookinghp,mophp,babyhp,fitnesshp,shoppinghp,metrohp,officehp,partnerhp]
+@onready var tasks = [laundry,cooking,mop,baby,fitness,shopping,metro,office,partner]
 var currentDifficulty = 1
 @onready var increase_difficulty = $IncreaseDifficulty
 @onready var start_game = $StartGame
@@ -81,10 +81,10 @@ func _process(delta):
 		key_p.get_child(0).play("Keypress")
 	#Top Right Task:
 	if Input.is_action_just_pressed("7"):
-		socialisinghp.health += 0.2
+		mophp.health += 0.2
 		key_7.get_child(0).play("Keypress")
 	if Input.is_action_just_pressed("9"):
-		socialisinghp.health += 0.2
+		mophp.health += 0.2
 		key_9.get_child(0).play("Keypress")
 	#Middle Left Task:
 	if Input.is_action_just_pressed("A"):
@@ -102,24 +102,24 @@ func _process(delta):
 		key_backspace.get_child(0).play("Keypress")
 	#Bottom Left Task:
 	if Input.is_action_just_pressed("L_CTRL"):
-		travellhp.health += 0.2
+		shoppinghp.health += 0.2
 		key_ctrl.get_child(0).play("Keypress")
 	if Input.is_action_just_pressed("SPACEBAR"):
-		travellhp.health += 0.2
+		shoppinghp.health += 0.2
 		key_space.get_child(0).play("Keypress")
 	#Bottom Middle Task:
 	if Input.is_action_just_pressed("H"):
-		workhp.health += 0.2
+		metrohp.health += 0.2
 		key_h.get_child(0).play("Keypress")
 	if Input.is_action_just_pressed("K"):
-		workhp.health += 0.2
+		metrohp.health += 0.2
 		key_k.get_child(0).play("Keypress")	
 	#Bottom Right Task:
 	if Input.is_action_just_pressed("1"):
-		childcarehp.health += 0.2
+		officehp.health += 0.2
 		key_1.get_child(0).play("Keypress")
 	if Input.is_action_just_pressed("3"):
-		childcarehp.health += 0.2
+		officehp.health += 0.2
 		key_3.get_child(0).play("Keypress")
 		
 	if (partner.isActive):

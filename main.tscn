@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://uftsgu6a1884" path="res://Assets/Shopping Kart.jpg" id="3_pyd0l"]
 [ext_resource type="PackedScene" uid="uid://csan6v74uwajo" path="res://Scenes/task.tscn" id="3_w7fro"]
 [ext_resource type="Texture2D" uid="uid://cpjqtwa64s04o" path="res://Assets/Treadmill.png" id="5_bho01"]
-[ext_resource type="Texture2D" uid="uid://cwaifk5tir3q3" path="res://Assets/Bar.png" id="5_tnlyy"]
 [ext_resource type="Texture2D" uid="uid://curec2qlj6bi0" path="res://Assets/keys/Q-Key.png" id="5_tx8sn"]
 [ext_resource type="Texture2D" uid="uid://blspv2aqydo2q" path="res://Assets/keys/E-Key.png" id="6_f3ix5"]
 [ext_resource type="Texture2D" uid="uid://cs6hj40ep66up" path="res://Assets/Lady.png" id="7_nrh20"]
@@ -15,8 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://c5uvfaip0ytgq" path="res://Assets/bedwing.png" id="8_gcvvb"]
 [ext_resource type="Texture2D" uid="uid://clec4x30l5xkq" path="res://Assets/keys/P-Key.png" id="9_87i2i"]
 [ext_resource type="Texture2D" uid="uid://cgkk0nrgq62ja" path="res://Assets/Herd.png" id="9_tdwor"]
-[ext_resource type="Texture2D" uid="uid://bgtc65s1g0wgq" path="res://Assets/U-Bahn.png" id="10_76prr"]
 [ext_resource type="Texture2D" uid="uid://cicq63b5hmym0" path="res://Assets/Tisch.png" id="11_3vw7h"]
+[ext_resource type="Texture2D" uid="uid://d1ogsqmrg3ll1" path="res://Assets/Mop.png" id="11_l6oxf"]
 [ext_resource type="Texture2D" uid="uid://dj7m6dmrfje6a" path="res://Assets/keys/7-Key.png" id="11_xud6n"]
 [ext_resource type="Texture2D" uid="uid://ce5ag12s5kep0" path="res://Assets/keys/9-Key.png" id="12_lic7e"]
 [ext_resource type="Texture2D" uid="uid://yhsyk2jre7bg" path="res://Assets/keys/A-Key.png" id="14_6nggt"]
@@ -24,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://cy42p1ppwt184" path="res://Assets/keys/Enter-Key.png" id="18_7ug5o"]
 [ext_resource type="Texture2D" uid="uid://bebcsuoge6xf" path="res://Assets/keys/Backspace.png" id="19_pqtx6"]
 [ext_resource type="Texture2D" uid="uid://d0mrgyj7kseai" path="res://Assets/keys/Space-Key.png" id="20_bixq0"]
+[ext_resource type="Texture2D" uid="uid://mgquw0uhou6q" path="res://Assets/U-Bahn2.png" id="21_1pe76"]
 [ext_resource type="Texture2D" uid="uid://c6enqjw4lfaek" path="res://Assets/keys/CTRL-Key.png" id="21_rfn0k"]
 [ext_resource type="Texture2D" uid="uid://brv27r1gy632d" path="res://Assets/keys/H-Key.png" id="22_e0e8h"]
 [ext_resource type="Texture2D" uid="uid://cnt2crxphltb5" path="res://Assets/keys/K-Key.png" id="23_pxfe1"]
@@ -106,7 +106,7 @@ texture = ExtResource("9_87i2i")
 [node name="Mop" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(642, 355)
 layout_mode = 2
-texture = ExtResource("5_tnlyy")
+texture = ExtResource("11_l6oxf")
 expand_mode = 1
 stretch_mode = 5
 
@@ -163,7 +163,7 @@ layout_mode = 2
 [node name="Shopping" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
-texture = ExtResource("10_76prr")
+texture = ExtResource("21_1pe76")
 expand_mode = 1
 stretch_mode = 5
 
