@@ -103,33 +103,33 @@ texture = ExtResource("8_4i4bg")
 [node name="Key_Right" parent="Control/VBoxContainer/1/Cooking" index="2"]
 texture = ExtResource("9_87i2i")
 
-[node name="Socialising" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
-custom_minimum_size = Vector2(635, 355)
+[node name="Mop" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
+custom_minimum_size = Vector2(642, 355)
 layout_mode = 2
 texture = ExtResource("5_tnlyy")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="Control/VBoxContainer/1/Socialising" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/1/Mop" index="1"]
 texture = ExtResource("11_xud6n")
 
-[node name="Key_Right" parent="Control/VBoxContainer/1/Socialising" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/1/Mop" index="2"]
 texture = ExtResource("12_lic7e")
 
 [node name="2" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="Shopping" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
+[node name="baby" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 texture = ExtResource("3_pyd0l")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="Control/VBoxContainer/2/Shopping" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/2/baby" index="1"]
 texture = ExtResource("14_6nggt")
 
-[node name="Key_Right" parent="Control/VBoxContainer/2/Shopping" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/2/baby" index="2"]
 texture = ExtResource("15_akw0x")
 
 [node name="dummy" type="TextureRect" parent="Control/VBoxContainer/2"]
@@ -160,43 +160,43 @@ texture = ExtResource("19_pqtx6")
 [node name="3" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="Travell" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Shopping" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("10_76prr")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="Control/VBoxContainer/3/Travell" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Shopping" index="1"]
 texture = ExtResource("21_rfn0k")
 
-[node name="Key_Right" parent="Control/VBoxContainer/3/Travell" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Shopping" index="2"]
 texture = ExtResource("20_bixq0")
 
-[node name="Work" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Metro" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("11_3vw7h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="Control/VBoxContainer/3/Work" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Metro" index="1"]
 texture = ExtResource("22_e0e8h")
 
-[node name="Key_Right" parent="Control/VBoxContainer/3/Work" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Metro" index="2"]
 texture = ExtResource("23_pxfe1")
 
-[node name="Childcare" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Office" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("8_gcvvb")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="Control/VBoxContainer/3/Childcare" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Office" index="1"]
 texture = ExtResource("25_3kdg2")
 
-[node name="Key_Right" parent="Control/VBoxContainer/3/Childcare" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Office" index="2"]
 texture = ExtResource("26_xyygi")
 
 [node name="IncreaseDifficulty" type="Timer" parent="."]
@@ -251,10 +251,10 @@ horizontal_alignment = 1
 
 [editable path="Control/VBoxContainer/1/Laundry"]
 [editable path="Control/VBoxContainer/1/Cooking"]
-[editable path="Control/VBoxContainer/1/Socialising"]
-[editable path="Control/VBoxContainer/2/Shopping"]
+[editable path="Control/VBoxContainer/1/Mop"]
+[editable path="Control/VBoxContainer/2/baby"]
 [editable path="Control/VBoxContainer/2/Partner"]
 [editable path="Control/VBoxContainer/2/Fitness"]
-[editable path="Control/VBoxContainer/3/Travell"]
-[editable path="Control/VBoxContainer/3/Work"]
-[editable path="Control/VBoxContainer/3/Childcare"]
+[editable path="Control/VBoxContainer/3/Shopping"]
+[editable path="Control/VBoxContainer/3/Metro"]
+[editable path="Control/VBoxContainer/3/Office"]
