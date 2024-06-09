@@ -73,12 +73,14 @@ func _on_progress_bar_dead():
 ## starts the Audioloop.
 func _on_audio_start_finished():
 	playAudioLoop()
+	
 ## plays the audio in a loop depending if constantLoop is set to true, else start timer.
 func _on_audio_loop_finished():
 	if constantLoop:
 		playAudioLoop()
 	else:
 		audio_timer.start()
+		
 ## plays the audioLoop if constantLoop is set to false.
 func _on_audio_timer_timeout():
 	playAudioLoop()

@@ -88,10 +88,10 @@ func _process(delta):
 		key_9.get_child(0).play("Keypress")
 	#Middle Left Task:
 	if Input.is_action_just_pressed("A"):
-		shoppinghp.health += 0.2
+		babyhp.health += 0.2
 		key_a.get_child(0).play("Keypress")
 	if Input.is_action_just_pressed("D"):
-		shoppinghp.health += 0.2
+		babyhp.health += 0.2
 		key_d.get_child(0).play("Keypress")
 	#Middle Right Task:
 	if Input.is_action_just_pressed("ENTER"):
