@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dw3wun4tcx6tn"
+path="res://.godot/imported/Waschmaschine Loop.wav-78f46208d7db24bfc6bebe4faeeab56a.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Waschmaschine Loop.wav"
+dest_files=["res://.godot/imported/Waschmaschine Loop.wav-78f46208d7db24bfc6bebe4faeeab56a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

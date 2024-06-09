@@ -38,4 +38,16 @@ offset_top = 256.0
 offset_right = -168.0
 offset_bottom = -40.0
 
+[node name="AudioStart" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+
+[node name="AudioLoop" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
+
+[node name="AudioTimer" type="Timer" parent="."]
+wait_time = 5.0
+
 [connection signal="dead" from="ProgressBar" to="." method="_on_progress_bar_dead"]
+[connection signal="finished" from="AudioStart" to="." method="_on_audio_start_finished"]
+[connection signal="finished" from="AudioLoop" to="." method="_on_audio_loop_finished"]
+[connection signal="timeout" from="AudioTimer" to="." method="_on_audio_timer_timeout"]

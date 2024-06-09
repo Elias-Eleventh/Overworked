@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cviu0mdx51ujt"
+path="res://.godot/imported/Baby Loop.wav-14282c2924fdf6feb42342844cdbb707.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Baby Loop.wav"
+dest_files=["res://.godot/imported/Baby Loop.wav-14282c2924fdf6feb42342844cdbb707.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

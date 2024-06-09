@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://la8odwrwv4gy"
+path="res://.godot/imported/Treadmill Run Loop.wav-3ee2f291ff7251ae680e02be6759c18c.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Treadmill Run Loop.wav"
+dest_files=["res://.godot/imported/Treadmill Run Loop.wav-3ee2f291ff7251ae680e02be6759c18c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

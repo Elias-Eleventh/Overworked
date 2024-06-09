@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dv4fj4xkkpkyt"
+path="res://.godot/imported/Waschmaschine Start.wav-9a53ce6a5e13311ca42fff133f8ec05d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Waschmaschine Start.wav"
+dest_files=["res://.godot/imported/Waschmaschine Start.wav-9a53ce6a5e13311ca42fff133f8ec05d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://n1ke0g7rlqmf"
+path="res://.godot/imported/Office Loop.wav-c8e2b97950c412d6034588e3a7d6a3a7.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Office Loop.wav"
+dest_files=["res://.godot/imported/Office Loop.wav-c8e2b97950c412d6034588e3a7d6a3a7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
