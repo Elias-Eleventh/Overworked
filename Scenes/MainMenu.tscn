@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8b4r4lh1mnai"]
+[gd_scene load_steps=4 format=3 uid="uid://b8b4r4lh1mnai"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
+[ext_resource type="FontFile" uid="uid://n34ni6q1yj5b" path="res://Assets/Fonts/Cascadia.ttf" id="3_rha5s"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -45,11 +46,19 @@ layout_mode = 2
 
 [node name="start" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rha5s")
 theme_override_font_sizes/font_size = 25
 text = "Begin Work"
 
+[node name="options" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rha5s")
+theme_override_font_sizes/font_size = 25
+text = "Options"
+
 [node name="quit" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("3_rha5s")
 theme_override_font_sizes/font_size = 25
 text = "Remain Relaxed"
 
@@ -61,9 +70,11 @@ offset_right = 1258.0
 offset_bottom = 631.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_rha5s")
 theme_override_font_sizes/font_size = 15
 text = "DebugMode"
 
 [connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
