@@ -46,17 +46,13 @@
 [node name="Main" type="Node2D"]
 script = ExtResource("1_nyyuw")
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="Control" type="Control" parent="AspectRatioContainer"]
-layout_mode = 2
-
-[node name="WomanAnimation" type="VideoStreamPlayer" parent="AspectRatioContainer/Control"]
+[node name="WomanAnimation" type="VideoStreamPlayer" parent="Control"]
 z_index = 2
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
@@ -69,7 +65,7 @@ autoplay = true
 expand = true
 loop = true
 
-[node name="Background" type="ColorRect" parent="AspectRatioContainer/Control"]
+[node name="Background" type="ColorRect" parent="Control"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -77,7 +73,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Grid" type="TextureRect" parent="AspectRatioContainer/Control"]
+[node name="Grid" type="TextureRect" parent="Control"]
 z_index = 10
 layout_mode = 2
 offset_right = 1920.0
@@ -86,98 +82,98 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_ewxbc")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/Control"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 layout_mode = 0
 offset_right = 1913.0
 offset_bottom = 1073.0
 
-[node name="1" type="HBoxContainer" parent="AspectRatioContainer/Control/VBoxContainer"]
+[node name="1" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="Laundry" parent="AspectRatioContainer/Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
+[node name="Laundry" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 texture = ExtResource("3_o5mq4")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/1/Laundry" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/1/Laundry" index="1"]
 texture = ExtResource("5_tx8sn")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/1/Laundry" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/1/Laundry" index="2"]
 texture = ExtResource("6_f3ix5")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/1/Laundry" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/1/Laundry" index="3"]
 stream = ExtResource("8_xk6bg")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/1/Laundry" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/1/Laundry" index="4"]
 stream = ExtResource("9_absq1")
 
-[node name="Cooking" parent="AspectRatioContainer/Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
+[node name="Cooking" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(636, 355)
 layout_mode = 2
 texture = ExtResource("9_tdwor")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/1/Cooking" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/1/Cooking" index="1"]
 texture = ExtResource("8_4i4bg")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/1/Cooking" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/1/Cooking" index="2"]
 texture = ExtResource("9_87i2i")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/1/Cooking" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/1/Cooking" index="3"]
 stream = ExtResource("13_2vev5")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/1/Cooking" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/1/Cooking" index="4"]
 stream = ExtResource("14_cws2v")
 
-[node name="Mop" parent="AspectRatioContainer/Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
+[node name="Mop" parent="Control/VBoxContainer/1" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(642, 355)
 layout_mode = 2
 texture = ExtResource("11_l6oxf")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/1/Mop" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/1/Mop" index="1"]
 texture = ExtResource("11_xud6n")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/1/Mop" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/1/Mop" index="2"]
 texture = ExtResource("12_lic7e")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/1/Mop" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/1/Mop" index="3"]
 stream = ExtResource("18_50s8b")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/1/Mop" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/1/Mop" index="4"]
 stream = ExtResource("18_50s8b")
 
-[node name="2" type="HBoxContainer" parent="AspectRatioContainer/Control/VBoxContainer"]
+[node name="2" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="baby" parent="AspectRatioContainer/Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
+[node name="baby" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 texture = ExtResource("3_pyd0l")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/2/baby" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/2/baby" index="1"]
 texture = ExtResource("14_6nggt")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/2/baby" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/2/baby" index="2"]
 texture = ExtResource("15_akw0x")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/2/baby" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/2/baby" index="3"]
 stream = ExtResource("22_arj04")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/2/baby" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/2/baby" index="4"]
 stream = ExtResource("23_ludad")
 
-[node name="dummy" type="TextureRect" parent="AspectRatioContainer/Control/VBoxContainer/2"]
+[node name="dummy" type="TextureRect" parent="Control/VBoxContainer/2"]
 custom_minimum_size = Vector2(637, 355)
 layout_mode = 2
 
-[node name="Partner" parent="AspectRatioContainer/Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
+[node name="Partner" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 visible = false
 custom_minimum_size = Vector2(635, 355)
 layout_mode = 2
@@ -185,83 +181,83 @@ texture = ExtResource("7_nrh20")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Fitness" parent="AspectRatioContainer/Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
+[node name="Fitness" parent="Control/VBoxContainer/2" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(640, 355)
 layout_mode = 2
 texture = ExtResource("5_bho01")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/2/Fitness" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/2/Fitness" index="1"]
 texture = ExtResource("18_7ug5o")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/2/Fitness" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/2/Fitness" index="2"]
 texture = ExtResource("19_pqtx6")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/2/Fitness" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/2/Fitness" index="3"]
 stream = ExtResource("28_5yooo")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/2/Fitness" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/2/Fitness" index="4"]
 stream = ExtResource("29_oyvuf")
 
-[node name="3" type="HBoxContainer" parent="AspectRatioContainer/Control/VBoxContainer"]
+[node name="3" type="HBoxContainer" parent="Control/VBoxContainer"]
 layout_mode = 2
 
-[node name="Shopping" parent="AspectRatioContainer/Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Shopping" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("21_1pe76")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/3/Shopping" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Shopping" index="1"]
 texture = ExtResource("21_rfn0k")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/3/Shopping" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Shopping" index="2"]
 texture = ExtResource("20_bixq0")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/3/Shopping" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/3/Shopping" index="3"]
 stream = ExtResource("33_xn4hg")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/3/Shopping" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/3/Shopping" index="4"]
 stream = ExtResource("33_xn4hg")
 
-[node name="Metro" parent="AspectRatioContainer/Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Metro" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("11_3vw7h")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/3/Metro" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Metro" index="1"]
 texture = ExtResource("22_e0e8h")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/3/Metro" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Metro" index="2"]
 texture = ExtResource("23_pxfe1")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/3/Metro" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/3/Metro" index="3"]
 stream = ExtResource("37_jfkaa")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/3/Metro" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/3/Metro" index="4"]
 stream = ExtResource("38_jkgcd")
 
-[node name="Office" parent="AspectRatioContainer/Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
+[node name="Office" parent="Control/VBoxContainer/3" instance=ExtResource("3_w7fro")]
 custom_minimum_size = Vector2(638, 355)
 layout_mode = 2
 texture = ExtResource("8_gcvvb")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Key_Left" parent="AspectRatioContainer/Control/VBoxContainer/3/Office" index="1"]
+[node name="Key_Left" parent="Control/VBoxContainer/3/Office" index="1"]
 texture = ExtResource("25_3kdg2")
 
-[node name="Key_Right" parent="AspectRatioContainer/Control/VBoxContainer/3/Office" index="2"]
+[node name="Key_Right" parent="Control/VBoxContainer/3/Office" index="2"]
 texture = ExtResource("26_xyygi")
 
-[node name="AudioStart" parent="AspectRatioContainer/Control/VBoxContainer/3/Office" index="3"]
+[node name="AudioStart" parent="Control/VBoxContainer/3/Office" index="3"]
 stream = ExtResource("42_dhy07")
 
-[node name="AudioLoop" parent="AspectRatioContainer/Control/VBoxContainer/3/Office" index="4"]
+[node name="AudioLoop" parent="Control/VBoxContainer/3/Office" index="4"]
 stream = ExtResource("42_dhy07")
 
 [node name="IncreaseDifficulty" type="Timer" parent="."]
@@ -314,12 +310,12 @@ horizontal_alignment = 1
 [connection signal="timeout" from="StartGame" to="." method="_on_start_game_timeout"]
 [connection signal="timeout" from="GameWinTimer" to="." method="_on_game_win_timer_timeout"]
 
-[editable path="AspectRatioContainer/Control/VBoxContainer/1/Laundry"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/1/Cooking"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/1/Mop"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/2/baby"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/2/Partner"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/2/Fitness"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/3/Shopping"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/3/Metro"]
-[editable path="AspectRatioContainer/Control/VBoxContainer/3/Office"]
+[editable path="Control/VBoxContainer/1/Laundry"]
+[editable path="Control/VBoxContainer/1/Cooking"]
+[editable path="Control/VBoxContainer/1/Mop"]
+[editable path="Control/VBoxContainer/2/baby"]
+[editable path="Control/VBoxContainer/2/Partner"]
+[editable path="Control/VBoxContainer/2/Fitness"]
+[editable path="Control/VBoxContainer/3/Shopping"]
+[editable path="Control/VBoxContainer/3/Metro"]
+[editable path="Control/VBoxContainer/3/Office"]
