@@ -55,5 +55,5 @@ theme_override_fonts/font = ExtResource("2_hatk4")
 theme_override_font_sizes/font_size = 40
 text = "Return"
 
-[connection signal="pressed" from="MarginContainer/VBoxContainer/Return_Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Return_Button" to="." method="_on_return_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Return_Button" to="." method="_on_button_pressed"]
