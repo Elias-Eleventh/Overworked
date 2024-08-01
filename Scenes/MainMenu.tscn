@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://b8b4r4lh1mnai"]
+[gd_scene load_steps=5 format=3 uid="uid://b8b4r4lh1mnai"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
+[ext_resource type="Texture2D" uid="uid://ce0wpdj8bkutg" path="res://Assets/Main Menu Screenshot.jpg" id="2_co4q3"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
+[ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="4_eue56"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,6 +13,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gi622")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_co4q3")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 layout_mode = 1
@@ -43,27 +54,67 @@ layout_mode = 2
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
-[node name="start" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Begin Work"
-
-[node name="quit" type="Button" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 25
-text = "Remain Relaxed"
-
 [node name="CheckButton" type="CheckButton" parent="."]
 layout_mode = 0
-offset_left = 1116.0
-offset_top = 600.0
-offset_right = 1258.0
-offset_bottom = 631.0
+offset_left = 1198.0
+offset_top = 602.0
+offset_right = 1418.0
+offset_bottom = 641.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
-theme_override_font_sizes/font_size = 15
+theme_override_fonts/font = ExtResource("4_eue56")
+theme_override_font_sizes/font_size = 25
 text = "DebugMode"
 
-[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="AspectRatioContainer/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 805.0
+offset_top = 655.0
+offset_right = 1032.0
+offset_bottom = 736.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
+theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_eue56")
+theme_override_font_sizes/font_size = 60
+text = "start"
+flat = true
+
+[node name="Options" type="Button" parent="."]
+offset_left = 794.0
+offset_top = 733.0
+offset_right = 1047.0
+offset_bottom = 814.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
+theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_eue56")
+theme_override_font_sizes/font_size = 60
+text = "options"
+flat = true
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 797.0
+offset_top = 817.0
+offset_right = 1037.0
+offset_bottom = 898.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
+theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("4_eue56")
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+flat = true
+
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
