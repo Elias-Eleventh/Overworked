@@ -112,6 +112,16 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_k524e")
 text = "quit"
 flat = true
 
+[node name="Options" type="Label" parent="."]
+offset_top = 490.0
+offset_right = 1920.0
+offset_bottom = 572.0
+theme_override_colors/font_color = Color(0.776929, 0.0291167, 0, 1)
+theme_override_fonts/font = ExtResource("4_eue56")
+theme_override_font_sizes/font_size = 70
+text = "overworked"
+horizontal_alignment = 1
+
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options_button" to="." method="_on_options_button_pressed"]
