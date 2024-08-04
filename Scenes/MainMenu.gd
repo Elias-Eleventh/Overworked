@@ -7,7 +7,6 @@ extends Control
 @onready var options_button = $options_button as Button
 @onready var start_level = preload("res://Scenes/tutorial.tscn") as PackedScene
 
-
 func _on_check_button_toggled(toggled_on):
 	Globals.debugMode = debugButton.button_pressed
 	print("Debug Mode active: " + str(Globals.debugMode))
@@ -23,6 +22,9 @@ func handle_connecting_signals() -> void:
 
 func on_start_pressed() -> void:
 	get_tree().change_scene_to_packed(start_level)
+
+func _on_options_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/settings.tscn")
 
 
 func on_quit_pressed() -> void:

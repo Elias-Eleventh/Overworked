@@ -2,6 +2,9 @@ extends Control
 
 @onready var exit_button = $Exit_Button
 
+func _on_exit_button_pressed():
+	get_tree().change_scene_to_file("res://Scenes/MainMenu.tscn")
+
 func _on_volume_value_changed(value):
 	AudioServer.set_bus_volume_db(0, value)
 
@@ -20,7 +23,3 @@ func _on_resolution_item_selected(index):
 			DisplayServer.window_set_size(Vector2i(1600,900))
 		3:
 			DisplayServer.window_set_size(Vector2i(1280,720))
-
-
-func _on_exit_button_pressed():
-	

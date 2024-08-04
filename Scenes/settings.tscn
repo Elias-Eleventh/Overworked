@@ -62,6 +62,7 @@ offset_right = 96.0
 offset_bottom = 51.0
 grow_horizontal = 2
 grow_vertical = 2
+text = "Return"
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
 [connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
