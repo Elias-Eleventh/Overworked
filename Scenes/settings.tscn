@@ -2,9 +2,10 @@
 
 [ext_resource type="Script" path="res://Scenes/settings.gd" id="1_ysp3u"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="2_ctpx7"]
-[ext_resource type="Texture2D" uid="uid://bkh3vh62rgilj" path="res://Assets/White.png" id="2_m85ev"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32xnx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkd1b"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -14,15 +15,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ysp3u")
-
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_m85ev")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -37,7 +29,7 @@ layout_mode = 2
 offset_top = 884.0
 offset_right = 1920.0
 offset_bottom = 974.0
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
 theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
@@ -54,13 +46,14 @@ layout_mode = 2
 offset_top = 553.0
 offset_right = 1920.0
 offset_bottom = 602.0
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
 theme_override_font_sizes/font_size = 40
 text = "Volume"
 horizontal_alignment = 1
 
 [node name="Volume" type="HSlider" parent="."]
+texture_filter = 3
 layout_mode = 2
 offset_left = 660.0
 offset_top = 611.0
@@ -72,11 +65,11 @@ max_value = 0.0
 
 [node name="Mute_Label" type="Label" parent="."]
 layout_mode = 2
-offset_left = 885.0
+offset_left = 897.0
 offset_top = 646.0
-offset_right = 987.0
+offset_right = 999.0
 offset_bottom = 695.0
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
 theme_override_font_sizes/font_size = 40
 text = "Mute"
@@ -110,21 +103,24 @@ popup/item_8/text = "1024x576"
 popup/item_8/id = 8
 
 [node name="Fullscreen" type="CheckButton" parent="."]
+texture_filter = 1
+texture_repeat = 1
 layout_mode = 2
 offset_left = 976.0
 offset_top = 281.0
 offset_right = 1020.0
 offset_bottom = 305.0
 scale = Vector2(2, 2)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vkd1b")
 button_pressed = true
 expand_icon = true
 
 [node name="Options" type="Label" parent="."]
 layout_mode = 0
 offset_left = -1.0
-offset_top = 34.0
+offset_top = 49.0
 offset_right = 1919.0
-offset_bottom = 116.0
+offset_bottom = 131.0
 theme_override_colors/font_color = Color(0.776929, 0.0291167, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
 theme_override_font_sizes/font_size = 68
@@ -137,7 +133,7 @@ offset_left = 690.0
 offset_top = 280.0
 offset_right = 929.0
 offset_bottom = 329.0
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
 theme_override_font_sizes/font_size = 40
 text = "Fullscreen"
@@ -149,7 +145,7 @@ offset_left = 691.0
 offset_top = 349.0
 offset_right = 930.0
 offset_bottom = 398.0
-theme_override_colors/font_color = Color(0.615686, 0.615686, 0.615686, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
 theme_override_font_sizes/font_size = 40
 text = "Resolution"
@@ -157,9 +153,9 @@ horizontal_alignment = 1
 
 [node name="Mute" type="CheckBox" parent="."]
 layout_mode = 0
-offset_left = 979.0
+offset_left = 991.0
 offset_top = 650.0
-offset_right = 1003.0
+offset_right = 1015.0
 offset_bottom = 674.0
 scale = Vector2(2, 2)
 
