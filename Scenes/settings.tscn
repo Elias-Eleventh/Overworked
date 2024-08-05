@@ -1,11 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtwbwyjewnu1g"]
+[gd_scene load_steps=7 format=3 uid="uid://dtwbwyjewnu1g"]
 
 [ext_resource type="Script" path="res://Scenes/settings.gd" id="1_ysp3u"]
+[ext_resource type="VideoStream" path="res://Assets/Videos/Options_Menu.ogv" id="2_6nkab"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="2_ctpx7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32xnx"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkd1b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvvgd"]
 
 [node name="Settings" type="Control"]
 layout_mode = 3
@@ -15,6 +18,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ysp3u")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_6nkab")
+autoplay = true
+loop = true
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -26,9 +42,9 @@ grow_vertical = 2
 
 [node name="exit_button" type="Button" parent="."]
 layout_mode = 2
-offset_top = 884.0
+offset_top = 765.0
 offset_right = 1920.0
-offset_bottom = 974.0
+offset_bottom = 855.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
 theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
@@ -152,12 +168,14 @@ text = "Resolution"
 horizontal_alignment = 1
 
 [node name="Mute" type="CheckBox" parent="."]
+texture_filter = 1
 layout_mode = 0
 offset_left = 991.0
 offset_top = 650.0
 offset_right = 1015.0
 offset_bottom = 674.0
 scale = Vector2(2, 2)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uvvgd")
 
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
