@@ -20,123 +20,100 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -4.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 stream = ExtResource("2_gkx2v")
 autoplay = true
 loop = true
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VideoStreamPlayer"]
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 160.0
-offset_bottom = 160.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="CenterContainer" type="CenterContainer" parent="VideoStreamPlayer/AspectRatioContainer"]
+[node name="CenterContainer" type="CenterContainer" parent="AspectRatioContainer"]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VideoStreamPlayer/AspectRatioContainer/CenterContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="AspectRatioContainer/CenterContainer"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="VideoStreamPlayer/AspectRatioContainer/CenterContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="AspectRatioContainer/CenterContainer/VBoxContainer"]
 custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
 
 [node name="CheckButton" type="CheckButton" parent="."]
-texture_filter = 1
 layout_mode = 0
-offset_left = 1410.0
-offset_top = 488.0
-offset_right = 1455.0
-offset_bottom = 545.0
+offset_left = 1198.0
+offset_top = 594.0
+offset_right = 1418.0
+offset_bottom = 633.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 25
+text = "DebugMode"
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 841.0
-offset_top = 535.0
-offset_right = 1068.0
-offset_bottom = 613.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 846.0
+offset_top = 651.0
+offset_right = 1073.0
+offset_bottom = 741.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
 theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
 theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 57
+theme_override_font_sizes/font_size = 68
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k524e")
 text = "start"
 flat = true
 
 [node name="options_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 813.0
-offset_top = 596.0
-offset_right = 1116.0
-offset_bottom = 674.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 811.0
+offset_top = 730.0
+offset_right = 1114.0
+offset_bottom = 820.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
 theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
 theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 57
+theme_override_font_sizes/font_size = 68
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k524e")
 text = "options"
 flat = true
 
 [node name="quit_button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 880.0
-offset_top = 659.0
-offset_right = 1054.0
-offset_bottom = 737.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 849.0
+offset_top = 812.0
+offset_right = 1089.0
+offset_bottom = 902.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
 theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
 theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
 theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 57
+theme_override_font_sizes/font_size = 68
 theme_override_styles/focus = SubResource("StyleBoxEmpty_k524e")
 text = "quit"
 flat = true
 
-[node name="Title" type="Label" parent="."]
-layout_mode = 0
-offset_left = -5.0
-offset_top = 410.0
-offset_right = 1916.0
-offset_bottom = 495.0
-theme_override_colors/font_color = Color(0.776929, 0.0291167, 0, 1)
-theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 57
-text = "overworked"
-horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 1234.0
-offset_top = 497.0
-offset_right = 1414.0
-offset_bottom = 534.0
-theme_override_colors/font_color = Color(0.460995, 0.460995, 0.460995, 1)
-theme_override_fonts/font = ExtResource("4_eue56")
-theme_override_font_sizes/font_size = 30
-text = "Debug Mode"
-
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options_button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]

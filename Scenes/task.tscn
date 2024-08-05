@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://csan6v74uwajo"]
+[gd_scene load_steps=5 format=3 uid="uid://csan6v74uwajo"]
 
 [ext_resource type="Script" path="res://Task.gd" id="1_j1xvc"]
 [ext_resource type="PackedScene" uid="uid://7v3hl0d5cp82" path="res://Scenes/progress_bar.tscn" id="2_b7ryf"]
 [ext_resource type="PackedScene" uid="uid://8ugemoobujcu" path="res://Scenes/key.tscn" id="3_ltx2x"]
+[ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="3_s4i5h"]
 
 [node name="Task" type="TextureRect"]
 offset_right = 640.0
@@ -22,6 +23,8 @@ offset_right = 152.0
 offset_bottom = 0.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_s4i5h")
+theme_override_font_sizes/font_size = 10
 value = 100.0
 
 [node name="Key_Left" parent="." instance=ExtResource("3_ltx2x")]
@@ -42,6 +45,7 @@ offset_bottom = -40.0
 volume_db = -10.0
 
 [node name="AudioLoop" type="AudioStreamPlayer2D" parent="."]
+visible = false
 volume_db = -10.0
 
 [node name="AudioTimer" type="Timer" parent="."]

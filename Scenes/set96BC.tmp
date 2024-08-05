@@ -1,0 +1,94 @@
+[gd_scene load_steps=4 format=3 uid="uid://dtwbwyjewnu1g"]
+
+[ext_resource type="Script" path="res://Scenes/settings.gd" id="1_ysp3u"]
+[ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="2_ctpx7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32xnx"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ysp3u")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Vol_Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+min_value = -30.0
+max_value = 0.0
+
+[node name="Mute_Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Mute"
+
+[node name="Mute" type="CheckBox" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Resolution" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+item_count = 9
+selected = 4
+popup/item_0/text = "3840x2160"
+popup/item_0/id = 0
+popup/item_1/text = "3200x1800"
+popup/item_1/id = 1
+popup/item_2/text = "2560x1440"
+popup/item_2/id = 2
+popup/item_3/text = "2048x1152"
+popup/item_3/id = 3
+popup/item_4/text = "1920x1080"
+popup/item_4/id = 4
+popup/item_5/text = "1600x900"
+popup/item_5/id = 5
+popup/item_6/text = "1366x768"
+popup/item_6/id = 6
+popup/item_7/text = "1280, 720"
+popup/item_7/id = 7
+popup/item_8/text = "1024, 576"
+popup/item_8/id = 8
+
+[node name="exit_button" type="Button" parent="."]
+layout_mode = 2
+offset_top = 730.0
+offset_right = 1920.0
+offset_bottom = 820.0
+theme_override_colors/font_color = Color(0.617455, 0.617455, 0.617455, 1)
+theme_override_colors/font_pressed_color = Color(0.471375, 0.471375, 0.471375, 1)
+theme_override_colors/font_hover_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_focus_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_colors/font_disabled_color = Color(0.470588, 0.470588, 0.470588, 1)
+theme_override_fonts/font = ExtResource("2_ctpx7")
+theme_override_font_sizes/font_size = 68
+theme_override_styles/focus = SubResource("StyleBoxEmpty_32xnx")
+text = "return"
+flat = true
+
+[node name="Fullscreen" type="CheckButton" parent="."]
+layout_mode = 2
+offset_top = 137.0
+offset_right = 44.0
+offset_bottom = 161.0
+
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="toggled" from="MarginContainer/VBoxContainer/Mute" to="." method="_on_mute_toggled"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/Resolution" to="." method="_on_resolution_item_selected"]
+[connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Fullscreen" to="." method="_on_fullscreen_pressed"]
