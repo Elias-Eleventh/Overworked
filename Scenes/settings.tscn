@@ -1,12 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtwbwyjewnu1g"]
+[gd_scene load_steps=8 format=3 uid="uid://dtwbwyjewnu1g"]
 
 [ext_resource type="Script" path="res://Scenes/settings.gd" id="1_ysp3u"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Options_Menu.ogv" id="2_6nkab"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="2_ctpx7"]
+[ext_resource type="Texture2D" uid="uid://d1fa8ue06hc5k" path="res://Assets/UI Overworked/Button Pressed.png" id="4_iup48"]
+[ext_resource type="Texture2D" uid="uid://bfff65rp671ge" path="res://Assets/UI Overworked/Button Unpressed.png" id="5_si27v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32xnx"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vkd1b"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uvvgd"]
 
@@ -92,10 +92,10 @@ text = "Mute"
 
 [node name="Resolution" type="OptionButton" parent="."]
 layout_mode = 2
-offset_left = 984.0
+offset_left = 1006.0
 offset_top = 343.0
-offset_right = 1111.0
-offset_bottom = 374.0
+offset_right = 1204.0
+offset_bottom = 393.0
 theme_override_font_sizes/font_size = 30
 item_count = 9
 selected = 4
@@ -118,19 +118,6 @@ popup/item_7/id = 7
 popup/item_8/text = "1024x576"
 popup/item_8/id = 8
 
-[node name="Fullscreen" type="CheckButton" parent="."]
-texture_filter = 1
-texture_repeat = 1
-layout_mode = 2
-offset_left = 976.0
-offset_top = 281.0
-offset_right = 1020.0
-offset_bottom = 305.0
-scale = Vector2(2, 2)
-theme_override_styles/focus = SubResource("StyleBoxEmpty_vkd1b")
-button_pressed = true
-expand_icon = true
-
 [node name="Options" type="Label" parent="."]
 layout_mode = 0
 offset_left = -1.0
@@ -143,11 +130,24 @@ theme_override_font_sizes/font_size = 68
 text = "Options"
 horizontal_alignment = 1
 
+[node name="Fullscreen" type="CheckBox" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 289.0
+offset_right = 1077.0
+offset_bottom = 361.0
+scale = Vector2(0.5, 0.5)
+theme_override_icons/checked = ExtResource("4_iup48")
+theme_override_icons/unchecked = ExtResource("5_si27v")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_uvvgd")
+button_pressed = true
+
 [node name="Fullscreen_Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 690.0
+offset_left = 705.0
 offset_top = 280.0
-offset_right = 929.0
+offset_right = 944.0
 offset_bottom = 329.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
@@ -157,9 +157,9 @@ horizontal_alignment = 1
 
 [node name="Resolution2" type="Label" parent="."]
 layout_mode = 0
-offset_left = 691.0
+offset_left = 706.0
 offset_top = 349.0
-offset_right = 930.0
+offset_right = 945.0
 offset_bottom = 398.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ctpx7")
@@ -170,16 +170,18 @@ horizontal_alignment = 1
 [node name="Mute" type="CheckBox" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 991.0
-offset_top = 650.0
-offset_right = 1015.0
-offset_bottom = 674.0
-scale = Vector2(2, 2)
+offset_left = 1005.0
+offset_top = 655.0
+offset_right = 1077.0
+offset_bottom = 727.0
+scale = Vector2(0.5, 0.5)
+theme_override_icons/checked = ExtResource("4_iup48")
+theme_override_icons/unchecked = ExtResource("5_si27v")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_uvvgd")
 
 [connection signal="pressed" from="exit_button" to="." method="_on_exit_button_pressed"]
 [connection signal="value_changed" from="Volume" to="." method="_on_volume_value_changed"]
 [connection signal="item_selected" from="Resolution" to="." method="_on_resolution_item_selected"]
-[connection signal="pressed" from="Fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="toggled" from="Fullscreen" to="." method="_on_mute_toggled"]
 [connection signal="toggled" from="Fullscreen" to="." method="_on_fullscreen_toggled"]
 [connection signal="toggled" from="Mute" to="." method="_on_mute_toggled"]
