@@ -1,12 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b8b4r4lh1mnai"]
+[gd_scene load_steps=5 format=3 uid="uid://b8b4r4lh1mnai"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
-[ext_resource type="Texture2D" uid="uid://cnjvifwpo2cog" path="res://Assets/UI Overworked/Slider On.png" id="4_63ivj"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="4_eue56"]
-[ext_resource type="Texture2D" uid="uid://cwloprr6kwbhw" path="res://Assets/UI Overworked/Slider Off.png" id="5_i4h7j"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lma8c"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k524e"]
 
@@ -53,18 +49,14 @@ layout_mode = 2
 [node name="CheckButton" type="CheckButton" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 1833.0
-offset_top = 1020.0
-offset_right = 1973.0
-offset_bottom = 1092.0
-scale = Vector2(0.3, 0.3)
+offset_left = 1410.0
+offset_top = 488.0
+offset_right = 1455.0
+offset_bottom = 545.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("4_eue56")
 theme_override_font_sizes/font_size = 40
-theme_override_icons/checked = ExtResource("4_63ivj")
-theme_override_icons/unchecked = ExtResource("5_i4h7j")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_lma8c")
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 0
@@ -134,11 +126,11 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 1651.0
-offset_top = 1009.0
-offset_right = 1831.0
-offset_bottom = 1046.0
-theme_override_colors/font_color = Color(0.138034, 0.138034, 0.138034, 1)
+offset_left = 1234.0
+offset_top = 497.0
+offset_right = 1414.0
+offset_bottom = 534.0
+theme_override_colors/font_color = Color(0.460995, 0.460995, 0.460995, 1)
 theme_override_fonts/font = ExtResource("4_eue56")
 theme_override_font_sizes/font_size = 30
 text = "Debug Mode"
@@ -146,5 +138,5 @@ text = "Debug Mode"
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options_button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
