@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8b4r4lh1mnai"]
+[gd_scene load_steps=6 format=3 uid="uid://b8b4r4lh1mnai"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="4_eue56"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cye60"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k524e"]
 
@@ -57,6 +59,7 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("4_eue56")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxEmpty_cye60")
 
 [node name="start_button" type="Button" parent="."]
 layout_mode = 0
