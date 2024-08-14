@@ -13,6 +13,9 @@ config_version=5
 config/name="Overworked"
 run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.427493, 0.427493, 0.427493, 1)
+boot_splash/show_image=false
+boot_splash/image="res://Assets/UI Overworked/Grey.png"
 config/icon="res://icon.svg"
 
 [autoload]
