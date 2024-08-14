@@ -28,26 +28,6 @@ stream = ExtResource("2_gkx2v")
 autoplay = true
 loop = true
 
-[node name="AspectRatioContainer" type="AspectRatioContainer" parent="VideoStreamPlayer"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 160.0
-offset_bottom = 160.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="VideoStreamPlayer/AspectRatioContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="VideoStreamPlayer/AspectRatioContainer/CenterContainer"]
-layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="VideoStreamPlayer/AspectRatioContainer/CenterContainer/VBoxContainer"]
-custom_minimum_size = Vector2(200, 200)
-layout_mode = 2
-
 [node name="CheckButton" type="CheckButton" parent="."]
 texture_filter = 1
 layout_mode = 0
@@ -141,5 +121,5 @@ text = "Debug Mode"
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options_button" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
