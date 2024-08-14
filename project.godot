@@ -16,7 +16,9 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/bg_color=Color(0.427493, 0.427493, 0.427493, 1)
 boot_splash/show_image=false
 boot_splash/image="res://Assets/UI Overworked/Grey.png"
-config/icon="res://icon.svg"
+config/icon="res://Assets/PFP.png"
+config/macos_native_icon="res://Assets/icon.icns"
+config/windows_native_icon="res://Assets/icon.ico"
 
 [autoload]
 
