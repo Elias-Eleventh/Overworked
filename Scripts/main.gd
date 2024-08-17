@@ -56,6 +56,7 @@ var currentDifficulty = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	AudioPlayer.stop_music()
 	if(Globals.debugMode):
 		increase_difficulty.wait_time = 1
 		game_win_timer.wait_time = 15
