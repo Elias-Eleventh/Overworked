@@ -6,6 +6,8 @@ extends Control
 @onready var quit_button = $quit_button as Button
 @onready var options_button = $options_button as Button
 @onready var start_level = preload("res://Scenes/tutorial.tscn") as PackedScene
+@onready var buzzing = $Buzzing
+
 
 func _on_check_button_toggled(toggled_on):
 	Globals.debugMode = debugButton.button_pressed
@@ -13,6 +15,8 @@ func _on_check_button_toggled(toggled_on):
 
 func _ready():
 	handle_connecting_signals()
+	if(Globals.firstStart):
+		buzzing.play(0)
 
 
 func handle_connecting_signals() -> void:
@@ -29,3 +33,7 @@ func _on_options_button_pressed():
 
 func on_quit_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_buzzing_finished():
+	Globals.firstStart = false;

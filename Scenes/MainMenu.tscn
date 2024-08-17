@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8b4r4lh1mnai"]
+[gd_scene load_steps=7 format=3 uid="uid://b8b4r4lh1mnai"]
 
 [ext_resource type="Script" path="res://Scenes/MainMenu.gd" id="1_gi622"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Title.ogv" id="2_gkx2v"]
 [ext_resource type="FontFile" uid="uid://5wmflf8ywusa" path="res://Assets/Cascadia.ttf" id="4_eue56"]
+[ext_resource type="AudioStream" uid="uid://brqu58mm55y2w" path="res://Assets/Sounds/Buzzing.mp3" id="4_wx5uh"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cye60"]
 
@@ -118,8 +119,13 @@ theme_override_fonts/font = ExtResource("4_eue56")
 theme_override_font_sizes/font_size = 30
 text = "Debug Mode"
 
+[node name="Buzzing" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_wx5uh")
+volume_db = -10.0
+
 [connection signal="toggled" from="CheckButton" to="." method="_on_check_button_toggled"]
 [connection signal="pressed" from="start_button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="options_button" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_pressed"]
 [connection signal="pressed" from="quit_button" to="." method="_on_quit_button_pressed"]
+[connection signal="finished" from="Buzzing" to="." method="_on_buzzing_finished"]
