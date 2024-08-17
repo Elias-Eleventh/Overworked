@@ -17,6 +17,7 @@ func _ready():
 	handle_connecting_signals()
 	if(Globals.firstStart):
 		buzzing.play(0)
+		Globals.firstStart = false
 
 
 func handle_connecting_signals() -> void:
