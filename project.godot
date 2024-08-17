@@ -23,6 +23,7 @@ config/windows_native_icon="res://Assets/icon.ico"
 [autoload]
 
 Globals="*res://Scripts/Globals.gd"
+AudioPlayer="*res://Scenes/audio_player.tscn"
 
 [debug]
 

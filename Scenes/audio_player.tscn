@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnb2vm7o24hi8"]
+
+[ext_resource type="AudioStream" uid="uid://cw3c0hbmtde2i" path="res://Assets/Sounds/Clock Ticking Sound Effect.wav" id="1_oli7i"]
+[ext_resource type="Script" path="res://Scenes/audio_player.gd" id="2_f003m"]
+
+[node name="audio_player" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_oli7i")
+volume_db = 1.0
+autoplay = true
+panning_strength = 0.0
+script = ExtResource("2_f003m")

@@ -14,6 +14,7 @@ func _on_check_button_toggled(toggled_on):
 	print("Debug Mode active: " + str(Globals.debugMode))
 
 func _ready():
+	AudioPlayer.play_music_level
 	handle_connecting_signals()
 	if(Globals.firstStart):
 		buzzing.play(0)
