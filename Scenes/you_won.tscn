@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/you_won.gd" id="1_h6vij"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Game Won.ogv" id="1_obthj"]
-[ext_resource type="AudioStream" uid="uid://cfhnffycnd2b2" path="res://Assets/Sounds/Game Won.wav" id="3_mon6x"]
+[ext_resource type="AudioStream" uid="uid://bmhi88d3fa13q" path="res://Assets/Sounds/Game Won.mp3" id="3_2ssl3"]
 
 [node name="winScreen" type="Control"]
 layout_mode = 3
@@ -27,7 +27,7 @@ stream = ExtResource("1_obthj")
 autoplay = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_mon6x")
+stream = ExtResource("3_2ssl3")
 volume_db = 8.0
 autoplay = true
 panning_strength = 0.0

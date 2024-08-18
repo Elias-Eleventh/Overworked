@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scenes/tutorial.gd" id="1_klnht"]
 [ext_resource type="VideoStream" path="res://Assets/Videos/Overworked_Opening_Crawl.ogv" id="1_ucsp2"]
-[ext_resource type="AudioStream" uid="uid://lsi6b2pfviem" path="res://Assets/Sounds/Media Intro.wav" id="3_fv8hn"]
+[ext_resource type="AudioStream" uid="uid://db7btnht7xowx" path="res://Assets/Sounds/Media Intro.mp3" id="3_emfdp"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3
@@ -22,7 +22,7 @@ volume_db = -80.0
 autoplay = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("3_fv8hn")
+stream = ExtResource("3_emfdp")
 volume_db = 8.0
 autoplay = true
 panning_strength = 0.0
