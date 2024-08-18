@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfhnffycnd2b2"
+path="res://.godot/imported/Game Won.wav-8114ea6b2a173c5c947eafa3423e4cb9.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Game Won.wav"
+dest_files=["res://.godot/imported/Game Won.wav-8114ea6b2a173c5c947eafa3423e4cb9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
